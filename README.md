@@ -8,5 +8,11 @@ The application consists of the following three microservices:
 - Payment Service
 - Notification Service
 
+#### Architecture Diagram - 
+
 ![Architecture Diagram](/meta/diagram-1.png)
+
+#### Database Schema Diagram -
+
+![DB Schema Diagram](/meta/db_schema-1.png)
 
