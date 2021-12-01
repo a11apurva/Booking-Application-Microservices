@@ -161,3 +161,25 @@ The Eureka Server is started on port 8761. On the browser if we go to http://loc
 
 ![Eureka](/meta/eureka-log.png)
 
+
+# Logic Flow
+
+### Making a new booking -
+
+
+<a href=""><img src="/meta/flowchart-1.png" alt="flow-1" width="400" border="10" /></a>
+
+
+### Completing a transaction to confirm booking -
+
+<a href=""><img src="/meta/flowchart-2.png" alt="flow-2" width="400" border="10" /></a>
+
+# Future Enhancements
+
+1.  Add error and exception handling at all the possible points
+2.  Package all the services together
+3.  Provide single start-up script to bring up all the services
+4.  Implement API gateway and load balancer
+
+
+
