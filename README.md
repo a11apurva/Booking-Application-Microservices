@@ -90,3 +90,64 @@ Response Body Ex -
 	}
 ```
 
+
+## Payment Service
+
+### API-3: Save Transaction and return transactionId
+
+Endpoint -
+
+```
+POST localhost:8083/transaction
+Content-Type application/json
+```
+
+Request Body Ex –
+
+```
+	{
+   	 "paymentMode": "CARD",
+	 "bookingId": 1,
+	 "upiId":"",
+	 "cardNumber":"Test Card 2"
+	}
+```
+
+Response Body Ex -
+
+```
+	{
+   	 "transactionId": 2,
+	}
+```
+
+### API-4: Fetch details of a transaction
+
+Endpoint -
+
+```
+GET localhost:8083/transaction/2
+```
+
+Response Body Ex -
+
+```
+	{
+   	 "transactionId": 2,
+    	 "bookingId": 1,
+    	 "paymentMode": "CARD",
+    	 "upiId": null,
+    	 "cardNumber": "Test Card Number"
+	}
+```
+
+## Notification Service
+
+Notification service is also made as a simple spring boot application. The main method sets the Kafka properties and subscribes to the topic "message". It starts consuming messages in a forever loop for notification service using Kafka and prints it on the console.
+Kafka server and zookeeper runs on an AWS EC2 instance.
+
+Please set the EC2 connection endpoint under property "bootstrap.servers" for the notifications to be fetched.
+
+Ex. from console - 
+
+![DB Schema Diagram](/meta/notification.png)
