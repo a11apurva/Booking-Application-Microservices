@@ -1,5 +1,5 @@
 # Booking-Application-Microservices
-A microservice architecture based hotel room booking application
+A microservice architecture based (hotel room) booking application
 
 ## High Level Architecture
 
